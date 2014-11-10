@@ -47,7 +47,8 @@ class ProductsController < ApplicationController
   def destroy
     product = Product.find(params[:id])
     product.destroy
-    redirect_to '/products'
+    flash[:success] = "Product deleted"
+    redirect_to products_path
   end
 
   private
@@ -57,7 +58,7 @@ class ProductsController < ApplicationController
 
   def only_admin
     if session[:is_admin] != true
-      redirect_to('/products')
+      redirect_to products_path
     end
   end
 end
