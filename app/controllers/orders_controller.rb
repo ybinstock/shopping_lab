@@ -19,7 +19,17 @@ class OrdersController < ApplicationController
   end
 
   def create
-
+    @order = Order.new(order_params)
+    if params[:product_ids].present?
+      for id in params[:product_ids]
+        @order.order_products.build(product_id: id)
+      end
+    end
+    if @order.save
+      redirect_to orders_path, notice: "Order saved"
+    else
+      render :new
+    end
   end
 
   private
