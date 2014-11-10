@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create({username: "eschoppik", password: "tracy1", is_admin: true})
+User.create({username: "testing", password: "secret", is_admin: true})
 User.create({username: "user1", password: "testing"})
 User.create({username: "user2", password: "testing"})
 User.create({username: "user3", password: "testing"})

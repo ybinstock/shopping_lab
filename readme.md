@@ -4,7 +4,7 @@ For this lab, we'd like you to create a small application that mimics a very min
 
 ## Getting started
 
-1. Create a User, Product, Order model
+1. Examine the code provided and take a look at the routes, migrations and controllers. Before migrating - add the following to the models: 
 
 2. A User should have a:
 
@@ -21,7 +21,7 @@ For this lab, we'd like you to create a small application that mimics a very min
 3. An Order should have a:
 	- name (this should always be present)	
 2. Start setting up your associations (a user can make many orders, many orders have many different products and many different products can belong to many different orders)
-3. Use has many through for your many to many association.
+3. Use `has many through` for your many to many association.
 4. Test your models, associations and validations in rails console before continuing.
 
 ## Views and Controllers
@@ -38,6 +38,3 @@ BONUS
 2. Allow admin's to view a list of all of the users 
 3. Allow users to change their personal information (username and password)
 4. Show the total price of the order when a users sees their orders
-
-For each product - show how many times it was added to an order (this product has been purchased over 30 times etc)
-

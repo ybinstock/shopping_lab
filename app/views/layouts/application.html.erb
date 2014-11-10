@@ -14,23 +14,15 @@
 </head>
 <body class = "container">
 
-  <% if flash[:notice].present? %>
-    <div class="container text-center alert alert-warning">
-      <%= flash[:notice] %>
-    </div>
+<% flash.each do |key, value| %>
+  <% if key == "notice" %>
+    <%= content_tag :div, value, class: "text-center alert alert-warning" %>
+  <% elsif key == "alert" %>
+    <%= content_tag :div, value, class: "text-center alert alert-danger" %>
+  <% else %>
+    <%= content_tag :div, value, class: "text-center alert alert-success" %>
   <% end %>
-
-  <% if flash[:alert].present? %>
-    <div class="container text-center alert alert-danger">
-      <%= flash[:alert] %>
-    </div>
-  <% end %>
-
-    <% if flash[:success].present? %>
-    <div class="container text-center alert alert-success">
-      <%= flash[:success] %>
-    </div>
-  <% end %>
+<% end %>
 
 <%= yield %>
 
