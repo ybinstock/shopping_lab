@@ -29,6 +29,14 @@ Rails.application.routes.draw do
 
   ### ORDER ROUTES (you need to build these - be sure to include the user_id for each one)
 
+  get 'users/:user_id/orders', to: 'orders#index', as: 'orders'
+
+  get 'users/:user_id/orders/:order_id/edit', to: 'orders#edit', as: 'orders_edit'
+
+  # add routes for a new order, showing a single order and adding a new order
+
   ### PRODUCTS ROUTES (you need to build these)
+
+  get 'products', to: 'products#index', as: 'products'
 
 end
