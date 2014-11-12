@@ -35,6 +35,7 @@ For this lab, we'd like you to create a small application that mimics a very min
 BONUS
 
 1. Ensure that users can only see __their__ orders unless they are an admin.
-2. Allow admin's to view a list of all of the users 
-3. Allow users to change their personal information (username and password)
-4. Show the total price of the order when a users sees their orders
+2. Allow admin's to view a list of all of the users.
+3. Allow users to change their personal information (username and password).
+4. Show the total price of the order when a users sees their orders.
+5. Convert `routes.rb` to use (nested?) resources to generate the routes.
