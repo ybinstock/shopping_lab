@@ -7,13 +7,12 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-User.create({username: "testing", password: "secret", is_admin: true})
+User.create({username: "admin", password: "secret", is_admin: true})
 User.create({username: "user1", password: "testing"})
 User.create({username: "user2", password: "testing"})
 User.create({username: "user3", password: "testing"})
 User.create({username: "user4", password: "testing"})
 User.create({username: "user5", password: "testing"})
-
 Product.create({name: "xbox", category: "electronics", price: 150.99})
 Product.create({name: "ps3", category: "electronics", price: 199.99})
 Product.create({name: "wii", category: "electronics", price: 129.99})
